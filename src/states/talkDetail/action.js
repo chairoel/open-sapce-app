@@ -1,3 +1,5 @@
+import api from "../../utils/api";
+
 /**
  * @TODO: Define all the actions (creator) for the talkDetail state
  */
