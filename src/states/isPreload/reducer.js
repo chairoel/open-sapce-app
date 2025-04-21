@@ -3,13 +3,13 @@ import { ActionType } from "./action";
 /**
  * @TODO: Define reducer for the isPreLoad state
  */
-function isPreLoadReducer(isPreLoad = true, action = {}) {
+function isPreLoadReducer(isPreload = true, action = {}) {
   switch (action.type) {
     case ActionType.SET_IS_PRELOAD:
-      return action.payload.isPreLoad;
+      return action.payload.isPreload;
 
     default:
-      return isPreLoad;
+      return isPreload;
   }
 }
 
