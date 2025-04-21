@@ -16,10 +16,10 @@ function receiveTalksActionCreator(talks) {
   };
 }
 
-function addTalkActionCreator(talks) {
+function addTalkActionCreator(talk) {
   return {
     type: ActionType.ADD_TALK,
-    payload: { talks },
+    payload: { talk },
   };
 }
 
@@ -33,7 +33,7 @@ function toggleLikeTalkActionCreator({ talkId, userId }) {
 function asyncAddTalk({ text, replyTo = "" }) {
   return async (dispatch) => {
     try {
-      const talk = api.createTalk({ text, replyTo });
+      const talk = await api.createTalk({ text, replyTo });
       dispatch(addTalkActionCreator(talk));
     } catch (error) {
       alert(error.message);
